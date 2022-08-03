@@ -1,28 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import ToastProvider from './ToastProvider';
-import type { ShowToast, ToastRef, ToastProps, RegisterRef } from './typings';
-const Toast: React.ForwardRefRenderFunction<ToastRef, ToastProps> = (
-  _props,
-  ref
-): JSX.Element | null => {
-  const [visible, setVisible] = React.useState(false);
-  const [text, setText] = React.useState('');
+import type { ToastType } from './typings';
 
-  const showToast = (toastText: string, duration: number = 3000) => {
-    setText(toastText);
-    setVisible(true);
-
-    setTimeout(() => {
-      setVisible(false);
-      setText('');
-    }, duration);
-  };
-
-  React.useImperativeHandle(ref, () => ({
-    showToast,
-  }));
-
+const Toast = ({ text, visible }: ToastType) => {
   return visible ? (
     <View style={styles.container}>
       <Text style={styles.text}>{text}</Text>
@@ -50,11 +30,3 @@ const styles = StyleSheet.create({
 });
 
 export default Toast;
-
-export const register: RegisterRef = (ref: ToastRef): void => {
-  ToastProvider.ref = ref;
-};
-
-export const showToast: ShowToast = (text: string, duration = 2500): void => {
-  ToastProvider.ref?.showToast(text, duration);
-};

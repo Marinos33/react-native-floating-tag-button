@@ -1,3 +1,4 @@
-export function multiply(a: number, b: number): Promise<number> {
-  return Promise.resolve(a * b);
-}
+import { showToast } from './Toast';
+import ToastProvider from './ToastProvider';
+
+export { ToastProvider, showToast };
