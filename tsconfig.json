@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "react-native-filter-fab": ["./src/index"]
+      "react-native-floating-tag-button": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
