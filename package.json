@@ -1,7 +1,7 @@
 {
   "name": "react-native-floating-tag-button",
-  "version": "0.1.0",
-  "description": "todo",
+  "version": "1.0.0",
+  "description": "a ready-to-use floating button component with animated tags",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/typing.d.ts",

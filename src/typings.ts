@@ -9,7 +9,7 @@ export type TagSource = {
 //props of the tag button component
 export type TagButtonProps = {
   dataSource: TagSource[]; //the tag to display and use
-  onTagSelected: (tags: string[] | string) => void; //the callback when a tag is selected
+  onTagSelected: (tags: string[]) => void; //the callback when a tag is selected
   icon: JSX.Element; //the element to display as the main button to hide/ show the tags
   sortTags?: boolean; //if true, the tags will be sorted alphabetically
   //the position of the main button

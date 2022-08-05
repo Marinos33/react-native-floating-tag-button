@@ -8,10 +8,7 @@ type PropTypes = {
   source: { value: string; label: string }[];
   singleChoiceMode?: boolean;
   style?: any;
-  onSelectedTagChanged: (
-    selectedTagValue: string[] | string,
-    index?: number
-  ) => void;
+  onSelectedTagChanged: (selectedTagValue: string[], index?: number) => void;
   tintColor?: string;
   tagStyle?: any;
   activeTagStyle?: any;

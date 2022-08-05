@@ -72,7 +72,7 @@ const TagButton = ({
   };
 
   //the callback function that is called when a tag is selected
-  const OnTagSelected = (tags: string[] | string) => {
+  const OnTagSelected = (tags: string[]) => {
     onTagSelected(tags);
   };
 

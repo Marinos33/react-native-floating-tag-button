@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import TagButton from '../../src/TagButton';
-import { TagSource } from '../../src/typings';
+import type { TagSource } from '../../src/typings';
 import { Ionicons } from '@expo/vector-icons';
 
 function Home(): JSX.Element {
