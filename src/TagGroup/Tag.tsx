@@ -106,14 +106,6 @@ export const Tag = React.forwardRef(
 Tag.displayName = 'Tag';
 
 const styles = StyleSheet.create({
-  tagContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  tag: {
-    marginRight: 8,
-    marginBottom: 8,
-  },
   tagBackground: {
     backgroundColor: 'white',
     paddingHorizontal: 8,

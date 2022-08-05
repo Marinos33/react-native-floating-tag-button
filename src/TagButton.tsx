@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     width: 75,
   },
   tagText: {
-    color: '#fff',
+    color: '#ffffff',
     fontSize: 14,
   },
 });

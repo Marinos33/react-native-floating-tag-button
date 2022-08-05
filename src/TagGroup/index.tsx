@@ -144,20 +144,4 @@ const styles = StyleSheet.create({
   tag: {
     margin: 4,
   },
-  tagBackground: {
-    backgroundColor: 'white',
-    paddingHorizontal: 8,
-    paddingVertical: 4,
-    borderRadius: 4,
-    borderWidth: 1,
-  },
-  textStyle: {
-    color: '#666',
-    fontSize: 13,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-  },
-  selectedTextStyle: {
-    color: '#333',
-  },
 });
