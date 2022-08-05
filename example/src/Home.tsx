@@ -6,9 +6,9 @@ import { Ionicons } from '@expo/vector-icons';
 
 function Home(): JSX.Element {
   const data: TagSource[] = [
-    { value: 'Free', label: 'free' },
-    { value: 'Open', label: 'open' },
-    { value: 'Public', label: 'public' },
+    { value: 'test 1', label: 'test 1' },
+    { value: 'test 2', label: 'test 2' },
+    { value: 'test 3', label: 'test 3' },
   ];
 
   const onSelect = (selectedTag: string[]) => {
@@ -28,12 +28,17 @@ function Home(): JSX.Element {
             style={{ backgroundColor: 'blue', borderRadius: 180, padding: 10 }}
           />
         }
-        position={{ bottom: 10, right: 5 }}
-        tagContainerStyle={{ backgroundColor: 'red', marginRight: 10 }}
+        position={{ bottom: 15, right: 15, left: 15, top: 15 }}
+        tagContainerStyle={{
+          backgroundColor: 'red',
+          marginRight: 10,
+        }}
+        animationDuration={200}
         textStyle={{ color: 'yellow', fontSize: 14 }}
         activeTagContainerStyle={{ backgroundColor: 'green' }}
         activeTextStyle={{ color: 'white' }}
         tintColor="black"
+        direction="column"
         touchableOpacity
       />
     </View>

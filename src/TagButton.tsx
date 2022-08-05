@@ -21,6 +21,7 @@ const TagButton = ({
   textStyle,
   activeTagContainerStyle,
   activeTextStyle,
+  sortTags = false,
   position = {
     bottom: 10,
     right: 5,
@@ -28,56 +29,55 @@ const TagButton = ({
   //singleChoiceMode = false,
   tintColor = '#00a8ff',
   touchableOpacity = false,
+  direction = 'column',
+  animationDuration = 200,
 }: TagButtonProps) => {
   const [animation] = useState(new Animated.Value(0));
   const [open, setOpen] = useState(false);
   const tagGroupRef = React.useRef<any>(null);
 
+  //sort the tags alphabetically if the props is set to true
   const sortedTag = React.useMemo(
     () =>
-      _.sortBy(
-        dataSource.map((tag) => {
-          return { value: tag.value, label: tag.label };
-        }),
-        (tag) => tag.label
-      ),
-    [dataSource]
+      sortTags
+        ? _.sortBy(
+            dataSource.map((tag) => {
+              return { value: tag.value, label: tag.label };
+            }),
+            (tag) => tag.label
+          )
+        : dataSource,
+    [dataSource, sortTags]
   );
 
+  //open the tag group with animation
   const toggleOpen = () => {
     const toValue = open ? 0 : 1;
 
     Animated.timing(animation, {
       toValue,
-      duration: 200,
+      duration: animationDuration, //in milliseconds
       useNativeDriver: false,
     }).start();
 
     setOpen(!open);
   };
 
-  const toggleInterpolate = animation.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, -70],
-  });
-
   const animatedTagStyle = {
     transform: [
       {
         scale: animation,
       },
-      {
-        translateY: toggleInterpolate,
-      },
     ],
   };
 
+  //the callback function that is called when a tag is selected
   const OnTagSelected = (tags: string[] | string) => {
     onTagSelected(tags);
   };
 
   return (
-    <View style={[styles.container, { ...position }]}>
+    <View style={[styles.container, { ...position, flexDirection: direction }]}>
       <Animated.View style={[styles.tagContainer, animatedTagStyle]}>
         <TagGroup
           ref={tagGroupRef}
@@ -90,6 +90,7 @@ const TagButton = ({
           tagStyle={[styles.tag, tagContainerStyle]}
           textStyle={[styles.tagText, textStyle]}
           touchableOpacity={touchableOpacity}
+          style={{ flexDirection: direction }}
         />
       </Animated.View>
       <TouchableWithoutFeedback onPress={toggleOpen}>
@@ -101,6 +102,7 @@ const TagButton = ({
 
 export default TagButton;
 
+//default styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -109,12 +111,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   tagContainer: {
-    marginBottom: -60,
+    alignSelf: 'center',
   },
   tag: {
     backgroundColor: '#787878',
-    minWidth: '15%',
     borderRadius: 180,
+    width: 75,
   },
   tagText: {
     color: '#fff',

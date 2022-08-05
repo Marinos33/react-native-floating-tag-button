@@ -38,10 +38,12 @@ const TagGroup = React.forwardRef(
   ) => {
     const [tagFlags, setTagFlags] = React.useState<any[]>(
       source.map(() => false)
-    );
-    const [selectedTag, setSelectedTag] = React.useState<any[]>([]);
+    ); //retain tag state and allow it to be selected or cleared
+
+    const [selectedTag, setSelectedTag] = React.useState<any[]>([]); // the selected tag array
 
     const onTagPress = (index: number) => {
+      /* should allow only one tag to be selected at the same time, not working for now
       if (singleChoiceMode) {
         selectedTag.forEach((tag: any, tagIndex: number) => {
           if (tag && index !== tagIndex) {
@@ -58,8 +60,9 @@ const TagGroup = React.forwardRef(
           (_value, tagFlagIndex) => index === tagFlagIndex
         );
         setTagFlags(tags);
-      }
+      }*/
 
+      //add the tag to the array
       let copy = tagFlags;
       copy[index] = !copy[index];
       let selectedTags = source.filter((_value, index) => copy[index]);
@@ -70,7 +73,7 @@ const TagGroup = React.forwardRef(
     /**
      * Get the index array of the selected Tag(s), return -1 if no Tag is selected.
      * */
-    const getSelectedIndex = (): number | number[] => {
+    /*const getSelectedIndex = (): number | number[] => {
       let selected = tagFlags
         .map((item, index) => {
           if (item) return index;
@@ -82,7 +85,7 @@ const TagGroup = React.forwardRef(
         return selected;
       }
       return -1;
-    };
+    };*/
 
     React.useImperativeHandle(ref, () => ({
       select: (index: number) => {

@@ -20,12 +20,14 @@ type TagProps = {
   tintColor?: string;
 };
 
+//the one tag element
+
 export const Tag = React.forwardRef(
   (
     {
       text = 'tag',
       onSelectStateChange,
-      allowUnselect = false,
+      //allowUnselect = false,
       touchableOpacity,
       onPress,
       textStyle,
@@ -36,7 +38,7 @@ export const Tag = React.forwardRef(
     }: TagProps,
     ref
   ) => {
-    const [selected, setSelected] = React.useState(false);
+    const [selected, setSelected] = React.useState(false); //define if the tag is selected or not
 
     React.useImperativeHandle(ref, () => ({
       setSelected: () => {
@@ -49,11 +51,13 @@ export const Tag = React.forwardRef(
 
     const onTagPress = () => {
       onSelectStateChange();
+      /* a mode to disable the tag selection, not use for now
       if (allowUnselect) {
         setSelected(true);
       } else {
         setSelected(!selected);
-      }
+      }*/
+      setSelected(!selected);
     };
 
     const textComponent = (
