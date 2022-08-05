@@ -1,4 +1,4 @@
-# react-native-filter-fab
+# react-native-floating-tag-button
 
 ![Desktop 05-08-22 14-52-07](https://user-images.githubusercontent.com/51862073/183081576-4b0aec57-d72c-4af1-a12e-370ef4167f9e.gif)
 
