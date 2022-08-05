@@ -2,13 +2,13 @@ import type { StyleProp, ViewStyle, TextStyle } from 'react-native';
 
 //type for the array with the source data (tag labels)
 export type TagSource = {
-  value: string; //teh value taht will be return on select
+  value: string; //teh value that will be return on select
   label: string; //the label displayed on the tag
 };
 
 //props of the tag button component
 export type TagButtonProps = {
-  dataSource: TagSource[]; //the tag to display and use
+  dataSource: TagSource[]; //the tags to display and use
   onTagSelected: (tags: string[]) => void; //the callback when a tag is selected
   icon: JSX.Element; //the element to display as the main button to hide/ show the tags
   sortTags?: boolean; //if true, the tags will be sorted alphabetically
