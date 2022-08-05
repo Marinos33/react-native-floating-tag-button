@@ -20,6 +20,6 @@ export type TagButtonProps = {
   activeTagContainerStyle?: StyleProp<ViewStyle>;
   activeTextStyle?: StyleProp<TextStyle>;
   tintColor?: string;
-  singleChoiceMode?: boolean;
+  //singleChoiceMode?: boolean; need to be fixed
   touchableOpacity?: boolean;
 };

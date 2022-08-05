@@ -17,12 +17,15 @@ const TagButton = ({
   dataSource,
   onTagSelected,
   icon,
-  position,
   tagContainerStyle,
   textStyle,
   activeTagContainerStyle,
   activeTextStyle,
-  singleChoiceMode = false,
+  position = {
+    bottom: 10,
+    right: 5,
+  },
+  //singleChoiceMode = false,
   tintColor = '#00a8ff',
   touchableOpacity = false,
 }: TagButtonProps) => {
@@ -80,7 +83,7 @@ const TagButton = ({
           ref={tagGroupRef}
           source={sortedTag}
           onSelectedTagChanged={OnTagSelected}
-          singleChoiceMode={singleChoiceMode}
+          //singleChoiceMode={singleChoiceMode}
           tintColor={tintColor}
           activeTagStyle={activeTagContainerStyle}
           activeTextStyle={activeTextStyle}
@@ -101,8 +104,6 @@ export default TagButton;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    bottom: 10,
-    right: 5,
     position: 'absolute',
     alignItems: 'center',
     justifyContent: 'center',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import TagButton from '../../src/TagButton';
 import { TagSource } from '../../src/typings';
 import { Ionicons } from '@expo/vector-icons';
@@ -17,11 +17,24 @@ function Home(): JSX.Element {
 
   return (
     <View style={styles.container}>
-      <Text>hello</Text>
       <TagButton
         dataSource={data}
         onTagSelected={onSelect}
-        icon={<Ionicons name="menu" size={24} color={'white'} />}
+        icon={
+          <Ionicons
+            name="menu"
+            size={24}
+            color="white"
+            style={{ backgroundColor: 'blue', borderRadius: 180, padding: 10 }}
+          />
+        }
+        position={{ bottom: 10, right: 5 }}
+        tagContainerStyle={{ backgroundColor: 'red' }}
+        textStyle={{ color: 'yellow', fontSize: 14 }}
+        activeTagContainerStyle={{ backgroundColor: 'green' }}
+        activeTextStyle={{ color: 'white' }}
+        tintColor="black"
+        touchableOpacity
       />
     </View>
   );
@@ -30,6 +43,18 @@ function Home(): JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: 'center',
+  },
+  button: {
+    marginVertical: 20,
+    paddingVertical: 10,
+    paddingHorizontal: 15,
+    backgroundColor: '#64B5F6',
+    borderRadius: 8,
+    alignSelf: 'center',
+  },
+  text: {
+    color: '#FFFFFF',
   },
 });
 
