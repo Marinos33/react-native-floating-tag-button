@@ -1,6 +1,6 @@
 # Contributing
 
-Don't hesitate to contribute to this project but be friendly and respectful to each other and don't forget to be read the contribution guidelines.
+Don't hesitate to contribute to this project but be friendly and respectful to each other and don't forget to read the contribution guidelines.
 
 ## Development workflow
 
