@@ -13,7 +13,7 @@ import _ from 'lodash';
 import TagGroup from './TagGroup';
 import type { TagButtonProps } from './typings';
 
-const TagButton = ({
+const TagButton: React.FC<TagButtonProps> = ({
   dataSource,
   onTagSelected,
   icon,
@@ -31,7 +31,7 @@ const TagButton = ({
   touchableOpacity = false,
   direction = 'column',
   animationDuration = 200,
-}: TagButtonProps) => {
+}) => {
   const [animation] = useState(new Animated.Value(0));
   const [open, setOpen] = useState(false);
   const tagGroupRef = React.useRef<any>(null);
