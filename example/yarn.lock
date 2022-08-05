@@ -10251,10 +10251,10 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-native-floating-tag-button@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-floating-tag-button/-/react-native-floating-tag-button-1.0.1.tgz#ca5cce5523f0a976148aab8faa19ec351b613e03"
-  integrity sha512-O+9Rno2kieb1EefvBHQqQHhsK3/Fk9DslvTX6mq6qaIYiQDpCQobjC7NsxabYQIZylaQLQwVHggaQ+a/ZrZhrA==
+react-native-floating-tag-button@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-floating-tag-button/-/react-native-floating-tag-button-1.0.6.tgz#6ea4312b7555231f57719d80d292e86fbe00695d"
+  integrity sha512-dNVRGd41XF72if1xFASza3KfkXD+dZ0LIdMvGnDE2gVhMKo8HQYT5thqhucfUqvM2E8PCJ72zGd8bmX/iH6udQ==
 
 react-native-safe-area-context@3.2.0:
   version "3.2.0"
