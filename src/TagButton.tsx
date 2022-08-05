@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   tagContainer: {
-    marginBottom: -70,
+    marginBottom: -60,
   },
   tag: {
     backgroundColor: '#787878',

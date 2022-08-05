@@ -29,7 +29,7 @@ function Home(): JSX.Element {
           />
         }
         position={{ bottom: 10, right: 5 }}
-        tagContainerStyle={{ backgroundColor: 'red' }}
+        tagContainerStyle={{ backgroundColor: 'red', marginRight: 10 }}
         textStyle={{ color: 'yellow', fontSize: 14 }}
         activeTagContainerStyle={{ backgroundColor: 'green' }}
         activeTextStyle={{ color: 'white' }}

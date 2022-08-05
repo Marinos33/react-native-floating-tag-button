@@ -142,8 +142,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   tag: {
-    marginRight: 8,
-    marginBottom: 8,
+    margin: 4,
   },
   tagBackground: {
     backgroundColor: 'white',
