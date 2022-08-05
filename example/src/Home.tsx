@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import TagButton from '../../src/TagButton';
-import type { TagSource } from '../../src/typings';
+import { TagButton, TagSource } from 'react-native-floating-tag-button';
 import { Ionicons } from '@expo/vector-icons';
 
 function Home(): JSX.Element {
