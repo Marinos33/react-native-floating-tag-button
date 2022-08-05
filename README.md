@@ -10,7 +10,8 @@ A floating button with animated tags that you can add to.
 npm install react-native-floating-tag-button --save
 yarn install react-native-floating-tag-button
 ```
-##Usage
+
+## Usage
 
 ```js
 import { TagSource, TagButton } from 'react-native-floating-tag-button';
@@ -49,21 +50,23 @@ const onSelect = (selectedTag: string[]) => {
 ```
 ### Properties
 
-| Prop                                 | Description                                                                       | Type                       |Default                |
-| ------------------------------------ | ----------------------------------------------------------------------------      | ---------------------------|---------------------- |
-| **`dataSource`**                     | the tags to display and use.                                                      | `TagSource[]`              |`[]`                   |
-| **`onTagSelected`**                  | the callback method when a tag is selected.                                       | `(tags: string[]) => void` |`none`                 |
-| **`icon`**                           | the element to display as the main button to hide and show the tags.              | `JSX.Element`              |`none`                 |
-| **`sortTags`**                       | if true, the tags will be sorted alphabetically.                                  | `boolean`                  |`false`                |
-| **`position`**                       | an object to define the position of the button on the screen.                     | ` `                        |` `                    |
-| **`direction`**                      | define the direction of the alignement between the floating button and his tags.  | ` `                        |` `                    |
-| **`tagContainerStyle`**              | the style of the container of the tags.                                           | `StyleProp<ViewStyle>`     |` `                    |
-| **`textStyle`**                      | the style of the labels of the tags.                                              | `StyleProp<TextStyle>`     |` `                    |
-| **`activeTagContainerStyle`**        | the style of the container of the tags when selected.                             | `StyleProp<ViewStyle>`     |` `                    |
-| **`activeTextStyle`**                | the style of the labels of the tags when selected.                                | `StyleProp<TextStyle>`     |` `                    |
-| **`tintColor?`**                     | the color of the border of the tags.                                              | `string`                   |` `                    |
-| **`touchableOpacity?`**              | if true, the tags will use a touchable opacity feedback.                          | `boolean`                  |` `                    |
-| **`animationDuration?`**             | the duration of the animation when the tags are shown.                            | `number`                   |` `                    |
+| Prop                                 | Description                                                                                                                    | Type                                                                 | Default                                                                                                 | Is Required  |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------| ---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|--------------|
+| **`dataSource`**                     | the tags to display and use.                                                                                                   | `TagSource[]`                                                        |`[]`                                                                                                     | yes          |
+| **`onTagSelected`**                  | the callback method when a tag is selected.                                                                                    | `(tags: string[]) => void`                                           |`none`                                                                                                   | yes          |
+| **`icon`**                           | the element to display as the floating button to hide and show the tags. the element can be an icon, a text, an image, etc.    | `JSX.Element`                                                        |`none`                                                                                                   | yes          |
+| **`sortTags`**                       | if true, the tags will be sorted alphabetically.                                                                               | `boolean`                                                            |`false`                                                                                                  | no           |
+| **`position`**                       | an object to define the position of the button on the screen.                                                                  | `{ top?: number; left?: number; right?: number; bottom?: number; } ` |`{ bottom: 10, right: 5 }`                                                                               | no           |
+| **`direction`**                      | define the direction of the alignement between the floating button and his tags.                                               | `'row' \| 'row-reverse' \| 'column' \| 'column-reverse'`             |`column`                                                                                                 | no           |
+| **`tagContainerStyle`**              | the style of the container of the tags.                                                                                        | `StyleProp<ViewStyle>`                                               |`{ backgroundColor: '#787878', borderRadius: 180, width: 75 }`                                           | no           |
+| **`textStyle`**                      | the style of the labels of the tags.                                                                                           | `StyleProp<TextStyle>`                                               |`{ color: '#ffffff', fontSize: 14 }`                                                                     | no           |
+| **`activeTagContainerStyle`**        | the style of the container of the tags when selected.                                                                          | `StyleProp<ViewStyle>`                                               |`{ backgroundColor: 'white', paddingHorizontal: 8, paddingVertical: 4, borderRadius: 4, borderWidth: 1 }`| no           |
+| **`activeTextStyle`**                | the style of the labels of the tags when selected.                                                                             | `StyleProp<TextStyle>`                                               |`{ color: '#333' }`                                                                                      | no           |
+| **`tintColor?`**                     | the color of the border of the tags.                                                                                           | `string`                                                             |`00a8ff`                                                                                                 | no           |
+| **`touchableOpacity?`**              | if true, the tags will use a touchable opacity as clickable component, otherwise they will use a touchable without feedback.   | `boolean`                                                            |`false`                                                                                                  | no           |
+| **`animationDuration?`**             | the duration of the animation when the tags are shown.                                                                         | `number`                                                             |`200`                                                                                                    | no           |
+
+A complete minimal example can be found [Here](example/src/Home.tsx).
 
 ## Contributing
 
