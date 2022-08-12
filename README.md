@@ -42,8 +42,8 @@ const onSelect = (selectedTag: string[]) => {
   }
   position={{ bottom: 15, right: 15 }}
   tagContainerStyle={{
-  backgroundColor: 'red',
-  marginRight: 10,
+    backgroundColor: 'red',
+    marginRight: 10,
   }}
   textStyle={{ color: 'yellow', fontSize: 14 }}
   activeTagContainerStyle={{ backgroundColor: 'green' }}
