@@ -11,7 +11,7 @@ A floating button with animated tags that you can add to.
 
 ```
 npm install react-native-floating-tag-button --save
-yarn install react-native-floating-tag-button
+yarn add react-native-floating-tag-button
 ```
 
 ## Usage
